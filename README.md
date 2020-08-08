@@ -4,7 +4,7 @@
 
 [Ujihisa discusses the notion of memoization](https://ujihisa.blogspot.com/2010/11/memoized-recursive-fibonacci-in-python.html).  It is a process for caching the results of recursive functions so previously calculated results are not recalulated.  The example is rather common version of the Fibonacci sequence in Python and explains how to manually implement the capability within the function.  In better_memoize, I iteratively improve on this by implementing the DRY principle.
 
-## Orignal
+## Original
 
 The code introduces a literal implementation of the Fibonacci sequence:
 
