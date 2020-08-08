@@ -68,3 +68,21 @@ def fib(n):
 ```
 
 The difference is subtle, but it is simple.  It saves two lines of code, the `else:` statement and the redunant `return cache[args]`.  The cost is adding 4 characters to the `if` statement, '`not` ', and saving four characters '    ' by taking the `return` out of the condition.  Net 0 additional characters to those lines of code, a better flow of execution, two fewer liens of code, and the implementation of a good principle.
+
+## Testing
+
+Use the `fib()` function without any of the memoization and run it for 3, 5, and 100:
+
+```python
+[fib(x) for x in [3, 5, 100]]
+```
+
+Then, run it again, with the same numbers.  Each run should take several minutes of operation and return: `[2, 5, 354224848179261915075]`
+
+Now, add the memoization and run it again; nearly instantaneous.
+
+Run it again for all numbers 1 - 500:
+
+```python
+[fib(x) for x in range(1,501)
+```
