@@ -49,7 +49,7 @@ Again, quite functional with impressive performance and a great example of memoi
 
 The DRY principle is simple: Don't Repeat Yourself.
 
-Easy enough.  So how do we do it?  The improvements can be made to both examples of memoization.  Simple remove redunant code and have a simple flow of execution.
+Easy enough.  So how do we do it?  The improvements can be made to both examples of memoization.  Simply remove redunant code and have a simple flow of execution.
 
 What is redundant?  Well, in the conditional operations, there is an `if` and an `else`.  Sometimes there are great reasons for this logic, but in this case each condition performs the same final operation, `return cache[args]`.  So, regardless, the code performs this operation, this means we should just always do that.  But how do we work out the condition?  Instead of checking if the value is in the cache, we check if it is NOT in the cache.  If it is NOT in the cache, we place it in the cache.  Regardless of that, we always return from the cache:
 
